@@ -33,6 +33,9 @@ struct ContentView: View {
                             Image(systemName: "\(word.count).circle.fill")
                             Text(word)
                         }
+                        .accessibilityElement()
+                        .accessibilityLabel(word)
+                        .accessibilityHint(word.count == 1 ? "\(word.count) letter" : "\(word.count) letters")
                     }
                 }
                 
